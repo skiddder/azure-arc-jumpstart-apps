@@ -41,11 +41,9 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 80
   targetPort: 8080
-  annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: "false"
 
 ingress:
   enabled: true
